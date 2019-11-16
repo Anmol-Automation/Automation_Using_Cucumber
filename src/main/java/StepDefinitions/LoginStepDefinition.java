@@ -2,6 +2,8 @@ package StepDefinitions;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 
 import org.junit.Assert;
@@ -11,8 +13,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-
+import cucumber.api.*;
+import io.cucumber.datatable.DataTable;
+//import gherkin.ast.DataTable;
 import io.cucumber.java.en.*;
 
 public class LoginStepDefinition 
@@ -50,12 +53,18 @@ public class LoginStepDefinition
 		driver.manage().window().maximize();
 	}
 	
-	@When("^User enters Username \"(.*)\" and Password \"(.*)\"$")
-	public void user_enters_Username_and_Password(String uname,String passwd) 
+	@When("^User enters Username and Password$")
+	public void user_enters_Username_and_Password(DataTable data) 
 	{
-	  
-		driver.findElement(By.xpath("//span[@id='dynamicFieldLogin']//input")).sendKeys(uname);
-		driver.findElement(By.xpath("//span[@id='dynamicFieldPasswd']//input")).sendKeys(passwd);
+//	    List<List<String>> strnigs = data.asLists();
+		//List<Map<String,String>> strnigs = data.asMaps(String.class, String.class);
+		
+		for(Map<Object, Object> strnigs : data.asMaps(String.class, String.class))
+		{
+		System.out.println("A");
+		driver.findElement(By.xpath("//span[@id='dynamicFieldLogin']//input")).sendKeys(strnigs.get("username").toString());
+		System.out.println("B");
+		driver.findElement(By.xpath("//span[@id='dynamicFieldPasswd']//input")).sendKeys(strnigs.get("password").toString());}
 	}
 
 	@Then("^User clicks on LoginButton$")

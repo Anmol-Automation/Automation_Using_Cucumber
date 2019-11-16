@@ -30,8 +30,8 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.step({
-  "name": "User clicks on CreateStudentAccount Tab",
-  "keyword": "And "
+  "name": "User clicks on Create_Student_Account Tab",
+  "keyword": "Then "
 });
 formatter.step({
   "name": "User enters \"\u003cusername\u003e\" and \"\u003cfirstname\u003e\" and \"\u003cmiddlename\u003e\" and \"\u003clastname\u003e\" and \"\u003cpassword\u003e\" and \"\u003cemail\u003e\"",
@@ -55,6 +55,46 @@ formatter.examples({
     {
       "cells": [
         "Test_4.28.5_Anmol1",
+        "firstname",
+        "middlename",
+        "lastname",
+        "password",
+        "anmolaggarwal@qainfotech.com"
+      ]
+    },
+    {
+      "cells": [
+        "Test_4.28.5_Anmol11",
+        "firstname",
+        "middlename",
+        "lastname",
+        "password",
+        "anmolaggarwal@qainfotech.com"
+      ]
+    },
+    {
+      "cells": [
+        "Test_4.28.5_Anmol12",
+        "firstname",
+        "middlename",
+        "lastname",
+        "password",
+        "anmolaggarwal@qainfotech.com"
+      ]
+    },
+    {
+      "cells": [
+        "Test_4.28.5_Anmol13",
+        "firstname",
+        "middlename",
+        "lastname",
+        "password",
+        "anmolaggarwal@qainfotech.com"
+      ]
+    },
+    {
+      "cells": [
+        "Test_4.28.5_Anmol14",
         "firstname",
         "middlename",
         "lastname",
@@ -87,7 +127,8 @@ formatter.match({
   "location": "LoginStepDefinition.user_enters_Username_and_Password(String,String)"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//span[@id\u003d\u0027dynamicFieldLogin\u0027]//input\"}\n  (Session info: chrome\u003d78.0.3904.97)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-TEMHAD3\u0027, ip: \u0027192.168.43.56\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_202\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.97, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\\Users\\ANMOLA~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:60853}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 7bf17706273ff51db2725237f5135aac\n*** Element info: {Using\u003dxpath, value\u003d//span[@id\u003d\u0027dynamicFieldLogin\u0027]//input}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat StepDefinitions.LoginStepDefinition.user_enters_Username_and_Password(LoginStepDefinition.java:57)\r\n\tat ✽.User enters Username \"admin_compro@myelt.com\" and Password \"thomson\"(file:/C:/Users/Anmol%20Aggarwal/eclipse-workspace/NaveenAutomationLabs/AutomationUsingCucumber/src/main/java/FeatureFiles/StudentsPage.feature:6)\r\n",
+  "status": "failed"
 });
 formatter.step({
   "name": "User clicks on LoginButton",
@@ -97,7 +138,7 @@ formatter.match({
   "location": "LoginStepDefinition.user_clicks_on_LoginButton()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "User is on HomePage",
@@ -107,7 +148,7 @@ formatter.match({
   "location": "LoginStepDefinition.user_is_on_HomePage()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "User clicks on Students Tab",
@@ -117,21 +158,324 @@ formatter.match({
   "location": "StudentsPageStepDefinition.ClickOnStudent_Tab()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
-  "name": "User clicks on CreateStudentAccount Tab",
-  "keyword": "And "
+  "name": "User clicks on Create_Student_Account Tab",
+  "keyword": "Then "
 });
 formatter.match({
   "location": "StudentsPageStepDefinition.ClickOnCreateStudentAccount_Tab()"
 });
 formatter.result({
-  "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[contains(text(),\u0027Create Student Account\u0027)]\"}\n  (Session info: chrome\u003d78.0.3904.97)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-TEMHAD3\u0027, ip: \u0027192.168.43.56\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_202\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.97, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\\Users\\ANMOLA~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:58702}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: c1c6b9d341a5dff8e4f1fb0bebd6e462\n*** Element info: {Using\u003dxpath, value\u003d//a[contains(text(),\u0027Create Student Account\u0027)]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat StepDefinitions.StudentsPageStepDefinition.ClickOnCreateStudentAccount_Tab(StudentsPageStepDefinition.java:22)\r\n\tat ✽.User clicks on CreateStudentAccount Tab(file:/C:/Users/Anmol%20Aggarwal/eclipse-workspace/NaveenAutomationLabs/AutomationUsingCucumber/src/main/java/FeatureFiles/StudentsPage.feature:10)\r\n",
-  "status": "failed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "User enters \"Test_4.28.5_Anmol1\" and \"firstname\" and \"middlename\" and \"lastname\" and \"password\" and \"anmolaggarwal@qainfotech.com\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StudentsPageStepDefinition.User_Enter_Details(String,String,String,String,String,String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.scenario({
+  "name": "Create a student account",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "User is already on Login Page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "LoginStepDefinition.User_On_Login_Page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User enters Username \"admin_compro@myelt.com\" and Password \"thomson\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "LoginStepDefinition.user_enters_Username_and_Password(String,String)"
+});
+formatter.result({
+  "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//span[@id\u003d\u0027dynamicFieldLogin\u0027]//input\"}\n  (Session info: chrome\u003d78.0.3904.97)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-TEMHAD3\u0027, ip: \u0027192.168.43.56\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_202\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.97, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\\Users\\ANMOLA~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:60908}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: c36749ba0a300841e0405adbc0d5f4eb\n*** Element info: {Using\u003dxpath, value\u003d//span[@id\u003d\u0027dynamicFieldLogin\u0027]//input}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat StepDefinitions.LoginStepDefinition.user_enters_Username_and_Password(LoginStepDefinition.java:57)\r\n\tat ✽.User enters Username \"admin_compro@myelt.com\" and Password \"thomson\"(file:/C:/Users/Anmol%20Aggarwal/eclipse-workspace/NaveenAutomationLabs/AutomationUsingCucumber/src/main/java/FeatureFiles/StudentsPage.feature:6)\r\n",
+  "status": "failed"
+});
+formatter.step({
+  "name": "User clicks on LoginButton",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LoginStepDefinition.user_clicks_on_LoginButton()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "User is on HomePage",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LoginStepDefinition.user_is_on_HomePage()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "User clicks on Students Tab",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StudentsPageStepDefinition.ClickOnStudent_Tab()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "User clicks on Create_Student_Account Tab",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StudentsPageStepDefinition.ClickOnCreateStudentAccount_Tab()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "User enters \"Test_4.28.5_Anmol11\" and \"firstname\" and \"middlename\" and \"lastname\" and \"password\" and \"anmolaggarwal@qainfotech.com\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StudentsPageStepDefinition.User_Enter_Details(String,String,String,String,String,String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.scenario({
+  "name": "Create a student account",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "User is already on Login Page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "LoginStepDefinition.User_On_Login_Page()"
+});
+formatter.result({
+  "error_message": "org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status\nfrom disconnected: received Inspector.detached event\n  (Session info: chrome\u003d78.0.3904.97)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-TEMHAD3\u0027, ip: \u0027192.168.43.56\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_202\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.97, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\\Users\\ANMOLA~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:61324}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 4a45a42b7681d6dbdb9100b5e8143cc1\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)\r\n\tat StepDefinitions.LoginStepDefinition.User_On_Login_Page(LoginStepDefinition.java:49)\r\n\tat ✽.User is already on Login Page(file:/C:/Users/Anmol%20Aggarwal/eclipse-workspace/NaveenAutomationLabs/AutomationUsingCucumber/src/main/java/FeatureFiles/StudentsPage.feature:5)\r\n",
+  "status": "failed"
+});
+formatter.step({
+  "name": "User enters Username \"admin_compro@myelt.com\" and Password \"thomson\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "LoginStepDefinition.user_enters_Username_and_Password(String,String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "User clicks on LoginButton",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LoginStepDefinition.user_clicks_on_LoginButton()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "User is on HomePage",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LoginStepDefinition.user_is_on_HomePage()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "User clicks on Students Tab",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StudentsPageStepDefinition.ClickOnStudent_Tab()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "User clicks on Create_Student_Account Tab",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StudentsPageStepDefinition.ClickOnCreateStudentAccount_Tab()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "User enters \"Test_4.28.5_Anmol12\" and \"firstname\" and \"middlename\" and \"lastname\" and \"password\" and \"anmolaggarwal@qainfotech.com\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StudentsPageStepDefinition.User_Enter_Details(String,String,String,String,String,String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.scenario({
+  "name": "Create a student account",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "User is already on Login Page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "LoginStepDefinition.User_On_Login_Page()"
+});
+formatter.result({
+  "error_message": "org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status\nfrom disconnected: received Inspector.detached event\n  (Session info: chrome\u003d78.0.3904.97)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-TEMHAD3\u0027, ip: \u0027192.168.43.56\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_202\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.97, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\\Users\\ANMOLA~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:61357}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 596cd98def439f4e7323c509b6edd063\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)\r\n\tat StepDefinitions.LoginStepDefinition.User_On_Login_Page(LoginStepDefinition.java:49)\r\n\tat ✽.User is already on Login Page(file:/C:/Users/Anmol%20Aggarwal/eclipse-workspace/NaveenAutomationLabs/AutomationUsingCucumber/src/main/java/FeatureFiles/StudentsPage.feature:5)\r\n",
+  "status": "failed"
+});
+formatter.step({
+  "name": "User enters Username \"admin_compro@myelt.com\" and Password \"thomson\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "LoginStepDefinition.user_enters_Username_and_Password(String,String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "User clicks on LoginButton",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LoginStepDefinition.user_clicks_on_LoginButton()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "User is on HomePage",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LoginStepDefinition.user_is_on_HomePage()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "User clicks on Students Tab",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StudentsPageStepDefinition.ClickOnStudent_Tab()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "User clicks on Create_Student_Account Tab",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StudentsPageStepDefinition.ClickOnCreateStudentAccount_Tab()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "User enters \"Test_4.28.5_Anmol13\" and \"firstname\" and \"middlename\" and \"lastname\" and \"password\" and \"anmolaggarwal@qainfotech.com\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StudentsPageStepDefinition.User_Enter_Details(String,String,String,String,String,String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.scenario({
+  "name": "Create a student account",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "User is already on Login Page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "LoginStepDefinition.User_On_Login_Page()"
+});
+formatter.result({
+  "error_message": "org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status\nfrom disconnected: received Inspector.detached event\n  (Session info: chrome\u003d78.0.3904.97)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-TEMHAD3\u0027, ip: \u0027192.168.43.56\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_202\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.97, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\\Users\\ANMOLA~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:61386}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 5ef5f86401e0e0585863f22f9487cf86\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)\r\n\tat StepDefinitions.LoginStepDefinition.User_On_Login_Page(LoginStepDefinition.java:49)\r\n\tat ✽.User is already on Login Page(file:/C:/Users/Anmol%20Aggarwal/eclipse-workspace/NaveenAutomationLabs/AutomationUsingCucumber/src/main/java/FeatureFiles/StudentsPage.feature:5)\r\n",
+  "status": "failed"
+});
+formatter.step({
+  "name": "User enters Username \"admin_compro@myelt.com\" and Password \"thomson\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "LoginStepDefinition.user_enters_Username_and_Password(String,String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "User clicks on LoginButton",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LoginStepDefinition.user_clicks_on_LoginButton()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "User is on HomePage",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LoginStepDefinition.user_is_on_HomePage()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "User clicks on Students Tab",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StudentsPageStepDefinition.ClickOnStudent_Tab()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "User clicks on Create_Student_Account Tab",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StudentsPageStepDefinition.ClickOnCreateStudentAccount_Tab()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "User enters \"Test_4.28.5_Anmol14\" and \"firstname\" and \"middlename\" and \"lastname\" and \"password\" and \"anmolaggarwal@qainfotech.com\"",
   "keyword": "Then "
 });
 formatter.match({
