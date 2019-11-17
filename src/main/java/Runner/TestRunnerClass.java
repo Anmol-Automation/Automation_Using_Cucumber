@@ -18,6 +18,7 @@ import cucumber.api.junit.Cucumber;
 		,dryRun= false
 		,monochrome = true
 		,plugin = {"pretty" , "json:Test_Output_Report/cucumber.json","html:Test_Output_Report/cucumber_report.html"} 
+		,tags= {"@smoketest" , "@regression"}
 		)
 
 public class TestRunnerClass 

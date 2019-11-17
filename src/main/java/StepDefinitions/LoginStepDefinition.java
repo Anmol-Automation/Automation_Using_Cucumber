@@ -79,5 +79,10 @@ public class LoginStepDefinition
 	 Assert.assertEquals("Titles does not match","MyELT | Online English Language Learning | Home",driver.getTitle());    
 	}
 	
+	@Then("^User closes the browser$")
+	public void Close_Browser()
+	{
+		driver.close();
+	}
 	
 }
